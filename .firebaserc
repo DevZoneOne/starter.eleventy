@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "devzoneone"
+  },
+  "targets": {
+    "devzoneone": {
+      "hosting": {
+        "starter-eleventy": [
+          "starter-eleventy"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
