@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "starter-eleventy",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
