@@ -2,17 +2,19 @@
 
 This is a template for new Eleventy (11ty) projects.
 It has preconfigured:
-* Eleventy configured with:
-  * Eleventy Navigation plugin
-* SASS
-* HTML minifier *(for production builds)*
-* Prettier *(for editing and development builds)*
-* PostCSS configured with:
-  * PostCSS hash *(adding a hash code to the output css)*
-  * AutoPrefixer *(adding vendor specific prefixes)*
-  * CSS nano *(minifier for CSS)*
-* NPM scripts for development and production build
-* Some example content, shortcode and transforms
+
+- Eleventy configured with:
+  - Eleventy Navigation plugin
+  - Eleventy RSS plugin
+- SASS
+- HTML minifier _(for production builds)_
+- Prettier _(for editing and development builds)_
+- PostCSS configured with:
+  - PostCSS hash _(adding a hash code to the output css)_
+  - AutoPrefixer _(adding vendor specific prefixes)_
+  - CSS nano _(minifier for CSS)_
+- NPM scripts for development and production build
+- Some example content, shortcode and transforms
 
 ## Detailed description
 
@@ -24,26 +26,25 @@ starter is developed as past of a blog article on [`DevZone.one`](https://devzon
 
 The lastest version of this template is deployed on:
 https://starter-eleventy.web.app
-*(**Please note:** The template and therefor the demo only contains a minimum of styling, as that is purpose of this stater template)*
+_(**Please note:** The template and therefor the demo only contains a minimum of styling, as that is purpose of this stater template)_
 
 ## How to use the template
 
-Don't fork this repository, that would give you all the branches and 
+Don't fork this repository, that would give you all the branches and
 commit history, not what you want.
-* **GitHub** If you're going to put your repo on Github, use the green 
-`Use this template` button and either directly create a new repo, or 
-open a codespace (online IDE). This will copy over all the files but without any git related history.
+
+- **GitHub** If you're going to put your repo on Github, use the green
+  `Use this template` button and either directly create a new repo, or
+  open a codespace (online IDE). This will copy over all the files but without any git related history.
 
 ## Start developing
+
 1. Install the dependencies:<br>
    `$ npm i`
 2. Run locally in watch mode (with html code prettified):<br>
    `$ npm run serve`
 3. Build for production (with html code minified):<br>
-   `$ npm build` 
-
-
-
+   `$ npm run build`
 
 ## Firebase hosting
 
@@ -60,6 +61,6 @@ The easiest way to get automatic deployment working via GitHub actions as used i
 
 1. Initiate firebase hosting in your project:<br>
    `$ firebase init hosting`
-2. Create firebase actions scripts. This step will also create a 
+2. Create firebase actions scripts. This step will also create a
    service account in your firebase project and creates a secret in GitHub to allow the actions to update your firebase project.<br>
    `$ firebase init hosting:github`

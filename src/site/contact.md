@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 title: Contact me
 tags: main
 eleventyNavigation:
