@@ -1,8 +1,12 @@
 <head>
-  <!-- STYLING -->
-  <link rel="stylesheet" href="/css/{{ manifest['style.css'] }}"/>
-  <!-- PAGE DATA -->
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ manifest.title }}</title>
+    <!-- STYLING -->
+    <link rel="stylesheet" href="/css/{{ manifest['style.css'] }}"/>
+    <!-- PAGE DATA -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ title or manifest.title }}</title>
+    <meta name="description" content="{{ description or manifest.description }}">
+    <!-- FEEDS -->
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 </head>

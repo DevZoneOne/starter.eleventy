@@ -1,4 +1,5 @@
 ---
+layout: base.njk
 title: About me
 tags: main
 eleventyNavigation:
