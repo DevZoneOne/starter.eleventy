@@ -5,10 +5,10 @@ metadata:
 
 <!DOCTYPE html>
 <html>
-    {% include 'head.njk' %}
+    {% include 'fragments/head.njk' %}
     <body>
-        {% include 'header.njk' %}
+        {% include 'fragments/header.njk' %}
         {{ content | safe }}
-        {% include 'footer.njk' %}
+        {% include 'fragments/footer.njk' %}
     </body>
 </html>
