@@ -1,0 +1,14 @@
+{%- for post in postslist | reverse %}
+    <section class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+        <a href="{{ post.url }}" class="postlist-link">
+            <h3>
+                {%- if post.data.title %}{{ post.data.title }}
+                {%- else %}
+                    <code>{{ post.url }}</code>
+                {%- endif %}
+            </h3>
+        </a>
+        <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+        {{ post.page.excerpt | md | safe }}
+    </section>
+{%- endfor %}

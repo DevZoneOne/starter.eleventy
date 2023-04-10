@@ -9,7 +9,7 @@
     "build:sass": "sass --no-source-map src/sass:public/css",
     "build:eleventy": "eleventy",
     "build:postcss": "postcss public/css/style.css -r --no-map",
-    "serve": "npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:postcss build:eleventy"
   },
   "repository": {
@@ -37,6 +37,6 @@
     "postcss-load-config": "^4.0.1",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.6",
-    "sass": "^1.59.3"
+    "sass": "^1.61.0"
   }
 }
