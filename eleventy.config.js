@@ -6,16 +6,30 @@ const {
 } = require("@11ty/eleventy");
 const { minify, prettify } = require("./src/transforms");
 const { year } = require("./src/shortcodes");
-const { htmlDateString } = require("./src/filters");
+const {
+  htmlDateString,
+  readableDate,
+  head,
+  min,
+  md,
+} = require("./src/filters");
 
 module.exports = function (eleventyConfig) {
   let buildMode;
+  // config
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+  });
   // events
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
     buildMode = runMode === "build";
   });
   // filters
   eleventyConfig.addFilter("htmlDateString", htmlDateString);
+  eleventyConfig.addFilter("readableDate", readableDate);
+  eleventyConfig.addFilter("head", head);
+  eleventyConfig.addFilter("min", min);
+  eleventyConfig.addFilter("md", md);
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);

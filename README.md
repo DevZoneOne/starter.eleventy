@@ -42,7 +42,7 @@ commit history, not what you want.
 1. Install the dependencies:<br>
    `$ npm i`
 2. Run locally in watch mode (with html code prettified):<br>
-   `$ npm run serve`
+   `$ npm start`
 3. Build for production (with html code minified):<br>
    `$ npm run build`
 
