@@ -1,0 +1,20 @@
+@use "fonts" as *;
+
+body {
+  font-family: $dosis;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3,
+strong,
+em {
+  font-weight: 400;
+}
+
+footer {
+  font-weight: 200;
+}
