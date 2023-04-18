@@ -3,18 +3,21 @@
 This is a template for new Eleventy (11ty) projects.
 It has preconfigured:
 
-- Eleventy configured with:
-  - Eleventy Navigation plugin
-  - Eleventy RSS plugin
-- SASS
-- HTML minifier _(for production builds)_
-- Prettier _(for editing and development builds)_
-- PostCSS configured with:
-  - PostCSS hash _(adding a hash code to the output css)_
-  - AutoPrefixer _(adding vendor specific prefixes)_
-  - CSS nano _(minifier for CSS)_
-- NPM scripts for development and production build
-- Some example content, shortcode and transforms
+- Eleventy
+  - Navigation plugin
+  - RSS plugin
+  - Render plugin
+  - HTML Base plugin
+- SASS _(Styling kept minimal on purpose)_
+- PostCSS
+  - PostCSS hash
+  - AutoPrefixer
+  - CSS Nano
+- Prettier (on local builds)
+- HTML Minifier (on production builds)
+- Example code
+  - Shortcode (year)
+  - Filters (htmlDate, readableDate, head, min, md)
 
 ## Detailed description
 

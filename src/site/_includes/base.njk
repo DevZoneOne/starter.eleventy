@@ -8,7 +8,9 @@ metadata:
     {% include 'components/head.njk' %}
     <body>
         {% include 'components/header.njk' %}
-        {{ content | safe }}
+        <main>
+            {{ content | safe }}
+        </main>
         {% include 'components/footer.njk' %}
     </body>
 </html>
