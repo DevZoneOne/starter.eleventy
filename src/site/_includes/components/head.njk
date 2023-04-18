@@ -5,7 +5,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{{ title or manifest.title }}</title>
-    <meta name="description" content="{{ description or manifest.description }}">
+    <meta name="description" content="{{ description or manifest.meta.description }}">
+    <meta name="keywords" content="{{ manifest.meta.keywords.join(', ')}}">
+    <meta name="author" content="{{ author or manifest.meta.author }}">
     <!-- FEEDS -->
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">

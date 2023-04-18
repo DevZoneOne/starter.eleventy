@@ -67,3 +67,10 @@ The easiest way to get automatic deployment working via GitHub actions as used i
 2. Create firebase actions scripts. This step will also create a
    service account in your firebase project and creates a secret in GitHub to allow the actions to update your firebase project.<br>
    `$ firebase init hosting:github`
+
+## Inspiration & Credits
+
+This template starter is partly based on:
+
+- https://github.com/11ty/eleventy-base-blog
+- https://github.com/kevin-powell/new-website

@@ -30,8 +30,17 @@ const md = (content = "") => {
   return markdownIt({ html: true }).render(content);
 };
 
-exports.htmlDateString = htmlDateString;
-exports.readableDate = readableDate;
-exports.head = head;
-exports.min = min;
-exports.md = md;
+const filterTagList = (tags) => {
+  return (tags || []).filter(
+    (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+  );
+};
+
+module.exports = {
+  filterTagList,
+  head,
+  htmlDateString,
+  md,
+  min,
+  readableDate,
+};

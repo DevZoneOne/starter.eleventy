@@ -1,5 +1,6 @@
 ---
 title: And the last one
+tags: another tag
 ---
 
 Lorem ipsum dolor sit amet, **_consectetuer adipiscing elit_**. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
