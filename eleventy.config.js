@@ -4,15 +4,9 @@ const {
   EleventyRenderPlugin,
   EleventyHtmlBasePlugin,
 } = require("@11ty/eleventy");
-const { minify, prettify } = require("./src/transforms");
-const { year } = require("./src/shortcodes");
-const {
-  htmlDateString,
-  readableDate,
-  head,
-  min,
-  md,
-} = require("./src/filters");
+const transforms = require("./src/transforms");
+const shortcodes = require("./src/shortcodes");
+const filters = require("./src/filters");
 
 module.exports = function (eleventyConfig) {
   let buildMode;
@@ -25,11 +19,12 @@ module.exports = function (eleventyConfig) {
     buildMode = runMode === "build";
   });
   // filters
-  eleventyConfig.addFilter("htmlDateString", htmlDateString);
-  eleventyConfig.addFilter("readableDate", readableDate);
-  eleventyConfig.addFilter("head", head);
-  eleventyConfig.addFilter("min", min);
-  eleventyConfig.addFilter("md", md);
+  eleventyConfig.addFilter("htmlDateString", filters.htmlDateString);
+  eleventyConfig.addFilter("readableDate", filters.readableDate);
+  eleventyConfig.addFilter("head", filters.head);
+  eleventyConfig.addFilter("min", filters.min);
+  eleventyConfig.addFilter("md", filters.md);
+  eleventyConfig.addFilter("filterTagList", filters.filterTagList);
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
@@ -38,15 +33,15 @@ module.exports = function (eleventyConfig) {
   // static
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   // shortcodes
-  eleventyConfig.addShortcode("year", year);
+  eleventyConfig.addShortcode("year", shortcodes.year);
   // transform
   eleventyConfig.addTransform("format", function (content) {
     if (buildMode) {
       // minify for production build
-      return minify(content, this.page.outputPath);
+      return transforms.minify(content, this.page.outputPath);
     }
     // prettify for develop mode
-    return prettify(content, this.page.outputPath);
+    return transforms.prettify(content, this.page.outputPath);
   });
 
   // build

@@ -1,7 +1,15 @@
 {
   "title": "DevZone.one Eleventy Starter",
-  "description": "Starter template for Eleventy",
   "url": "https://starter-eleventy.web.app",
   "language": "en",
-  "style.css": "style.fe6a41aa8a.css"
+  "meta": {
+    "author": "DevZone.one",
+    "description": "Starter template for Eleventy",
+    "keywords": [
+      "blog",
+      "devzone",
+      "devzone.one"
+    ]
+  },
+  "style.css": "style.66460f1eeb.css"
 }
