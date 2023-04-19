@@ -7,15 +7,15 @@ eleventyNavigation:
   order: 1
 ---
 
-In this readme you find how to get started with this template, but this
-starter is developed as past of a blog article on [`DevZone.one`](https://devzone.one), you find a much more detailed walk-through on:
+On this page you find how to get started with this template, but this
+starter is developed as part of a blog article on [`DevZone.one`](https://devzone.one), you find a much more detailed walk-through on:
 [**DevZone.one - Get started with Eleventy**](https://devzone.one/blogs/get-started-with-eleventy)
 
 ## Demo
 
 The lastest version of this template is deployed on:
 <https://starter-eleventy.devzoneone.app>
-_(**Please note:** The template and therefor the demo only contains a minimum of styling, as that is purpose of this stater template)_
+_(**Please note:** The template and the demo only contain a minimum of styling, as that is the purpose of this starter template)_
 
 ## How to use the template
 
@@ -24,7 +24,7 @@ commit history, not what you want.
 
 - **GitHub** If you're going to put your repo on Github, use the green
   `Use this template` button and either directly create a new repo, or
-  open a codespace (online IDE). This will copy over all the files but without any git related history.
+  open a codespace (online IDE). This will copy over all the files but without any git-related history.
 
 ## Start developing
 
@@ -37,7 +37,7 @@ commit history, not what you want.
 
 ## Firebase hosting
 
-This template is automatically deployed to Firebase hosting for demo purposes. Please cleanup or adjust according to your needs as follows:
+This template is automatically deployed to Firebase hosting for demo purposes. Please clean up or adjust according to your needs as follows:
 
 ### Not using firebase
 
@@ -46,12 +46,12 @@ This template is automatically deployed to Firebase hosting for demo purposes. P
 
 ### Using firebase for your own projects:
 
-The easiest way to get automatic deployment working via GitHub actions as used in the template, is to delete all firebase related files as described above and use the Firebase CLI to configure it again for your Firebase project. After that, continue as follows:
+The easiest way to get automatic deployment working via GitHub actions as used in the template is to delete all firebase related files as described above and use the Firebase CLI to configure it again for your Firebase project. After that, continue as follows:
 
-1. Initiate firebase hosting in your project:<br>
+1. Initiate Firebase hosting in your project:<br>
    `$ firebase init hosting`
-2. Create firebase actions scripts. This step will also create a
-   service account in your firebase project and creates a secret in GitHub to allow the actions to update your firebase project.<br>
+2. Create Firebase action scripts. This step will also create a
+   service account in your Firebase project and creates a secret in GitHub to allow the actions to update your Firebase project.<br>
    `$ firebase init hosting:github`
 
 ## Inspiration & Credits
