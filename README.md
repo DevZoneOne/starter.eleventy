@@ -28,7 +28,7 @@ starter is developed as past of a blog article on [`DevZone.one`](https://devzon
 ## Demo
 
 The lastest version of this template is deployed on:
-https://starter-eleventy.web.app
+https://starter-eleventy.devzoneone.app
 _(**Please note:** The template and therefor the demo only contains a minimum of styling, as that is purpose of this stater template)_
 
 ## How to use the template
