@@ -9,4 +9,4 @@ eleventyNavigation:
 
 Bug reports, improvements, or other tips can be shared via Github, either by creating a fork with a pull request or filing a ticket.
 
-The template can be found on GitHub: https://github.com/DevZoneOne/starter.eleventy>.
+The template can be found on GitHub: <https://github.com/DevZoneOne/starter.eleventy>.
