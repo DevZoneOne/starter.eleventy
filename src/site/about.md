@@ -35,28 +35,9 @@ commit history, not what you want.
 3. Build for production (with html code minified):<br>
    `$ npm run build`
 
-## Firebase hosting
-
-This template is automatically deployed to Firebase hosting for demo purposes. Please clean up or adjust according to your needs as follows:
-
-### Not using firebase
-
-1. Delete `.firebaserc` and `firebase.json`
-2. Delete the two workflows in `.github/workflows` or modify them to your own needs.
-
-### Using firebase for your own projects:
-
-The easiest way to get automatic deployment working via GitHub actions as used in the template is to delete all firebase related files as described above and use the Firebase CLI to configure it again for your Firebase project. After that, continue as follows:
-
-1. Initiate Firebase hosting in your project:<br>
-   `$ firebase init hosting`
-2. Create Firebase action scripts. This step will also create a
-   service account in your Firebase project and creates a secret in GitHub to allow the actions to update your Firebase project.<br>
-   `$ firebase init hosting:github`
-
 ## Inspiration & Credits
 
 This template starter is partly based on:
 
 - <https://github.com/11ty/eleventy-base-blog>
-- <https://github.com/kevin-powell/new-website>
+- <https://github.com/kevin-powell/new-website
