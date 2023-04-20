@@ -9,7 +9,7 @@ eleventyNavigation:
 
 On this page you find how to get started with this template, but this
 starter is developed as part of a blog article on [`DevZone.one`](https://devzone.one), you find a much more detailed walk-through on:
-[**DevZone.one - Get started with Eleventy**](https://devzone.one/blogs/get-started-with-eleventy)
+[**DevZone.one - Get started with Eleventy**](https://devzone.one/posts/get-started-with-eleventy)
 
 ## Demo
 
