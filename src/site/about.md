@@ -58,5 +58,5 @@ The easiest way to get automatic deployment working via GitHub actions as used i
 
 This template starter is partly based on:
 
-- https://github.com/11ty/eleventy-base-blog
-- https://github.com/kevin-powell/new-website
+- <https://github.com/11ty/eleventy-base-blog>
+- <https://github.com/kevin-powell/new-website>
