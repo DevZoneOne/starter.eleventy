@@ -9,6 +9,9 @@ metadata:
     <body>
         {% include 'components/header.njk' %}
         <main>
+            {%- if draft %}
+                <div class="draft">DRAFT</div>
+            {%- endif %}
             {{ content | safe }}
         </main>
         {% include 'components/footer.njk' %}

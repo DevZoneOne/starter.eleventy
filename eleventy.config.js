@@ -4,19 +4,21 @@ const {
   EleventyRenderPlugin,
   EleventyHtmlBasePlugin,
 } = require("@11ty/eleventy");
-const transforms = require("./src/transforms");
-const shortcodes = require("./src/shortcodes");
+
 const filters = require("./src/filters");
+const helpers = require("./src/helpers");
+const shortcodes = require("./src/shortcodes");
+const transforms = require("./src/transforms");
 
 module.exports = function (eleventyConfig) {
-  let buildMode;
+  let prodMode;
   // config
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
   });
   // events
   eleventyConfig.on("eleventy.before", async ({ runMode }) => {
-    buildMode = runMode === "build";
+    prodMode = runMode === "build";
   });
   // filters
   eleventyConfig.addFilter("htmlDateString", filters.htmlDateString);
@@ -25,6 +27,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("min", filters.min);
   eleventyConfig.addFilter("md", filters.md);
   eleventyConfig.addFilter("filterTagList", filters.filterTagList);
+  // global data
+  eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
+    return (data) => helpers.draftPermaLink(data, prodMode);
+  });
+  eleventyConfig.addGlobalData(
+    "eleventyComputed.eleventyExcludeFromCollections",
+    function () {
+      return (data) => helpers.draftExcludeFromCollections(data, prodMode);
+    }
+  );
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
@@ -36,7 +48,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", shortcodes.year);
   // transform
   eleventyConfig.addTransform("format", function (content) {
-    if (buildMode) {
+    if (prodMode) {
       // minify for production build
       return transforms.minify(content, this.page.outputPath);
     }
