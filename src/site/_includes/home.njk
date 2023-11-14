@@ -1,16 +1,11 @@
 ---
 layout: base.njk
-title: DevZone.one Eleventy Starter
-tags: main
-eleventyNavigation:
-  key: Home
-  order: 0
 eleventyImport:
   collections: ["posts"]
 numberOfLatestPostsToShow: 3
 ---
 
-{% renderFile "./src/site/_fragments/intro.md" %}
+{{ content | safe }}
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}

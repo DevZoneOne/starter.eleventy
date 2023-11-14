@@ -1,3 +1,12 @@
+---
+layout: home
+title: DevZone.one Eleventy Starter
+tags: main
+eleventyNavigation:
+  key: Home
+  order: 0
+---
+
 ## Welcome to this eleventy blog starter template
 
 This is an example starter template for _[Eleventy](https://11ty.dev)_ as explained in this **[DevZone.one - Get started with Eleventy](https://devzone.one/posts/get-started-with-eleventy)**.
