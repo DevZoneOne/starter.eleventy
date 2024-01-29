@@ -4,5 +4,8 @@ node_modules
 # build artefacts
 public
 
+# IDE related files
+.vscode
+
 # macOS related files
 .DS_Store
