@@ -4,6 +4,8 @@ const {
   EleventyRenderPlugin,
   EleventyHtmlBasePlugin,
 } = require("@11ty/eleventy");
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
 
 const filters = require("./src/filters");
 const helpers = require("./src/helpers");
@@ -12,6 +14,11 @@ const transforms = require("./src/transforms");
 
 module.exports = function (eleventyConfig) {
   let prodMode;
+  let mdOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
   // config
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
@@ -36,6 +43,11 @@ module.exports = function (eleventyConfig) {
     function () {
       return (data) => helpers.draftExcludeFromCollections(data, prodMode);
     }
+  );
+  // library
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt(mdOptions).use(markdownItFootnote)
   );
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);

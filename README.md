@@ -1,6 +1,6 @@
 # Starter template for Eleventy
 
-This is a template for new Eleventy (11ty) projects.
+This is a example markdown / liquid starter template for new Eleventy (11ty) projects.
 It has preconfigured:
 
 - Eleventy
@@ -8,7 +8,9 @@ It has preconfigured:
   - RSS plugin
   - Render plugin
   - HTML Base plugin
-- SASS _(Styling kept minimal on purpose)_
+  - Markdown configured with footnotes
+- Liquid based scripts[^feeds] (instead of nunjucks)
+- SASS[^styling]
 - PostCSS
   - PostCSS hash
   - AutoPrefixer
@@ -18,6 +20,9 @@ It has preconfigured:
 - Example code
   - Shortcode (year)
   - Filters (htmlDate, readableDate, head, min, md)
+
+[^styling]: Styling kept minimal on purpose.
+[^feeds]: RSS feeds still need to be rewritten.
 
 ## Detailed description
 
