@@ -1,0 +1,17 @@
+---
+layout: base
+eleventyImport:
+  collections: ["publishedPosts"]
+numberOfLatestPostsToShow: 3
+---
+
+{{ content }}
+
+{% assign postsCount = collections.posts | size %}
+{% assign latestPostsCount = postsCount | at_most: numberOfLatestPostsToShow %}
+{% assign latestPostsCountNegative = latestPostsCount | times: -1 %}
+<h2>
+  Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}
+</h2>
+{% assign list = collections.posts | slice: latestPostsCountNegative, latestPostsCount %}
+{% include 'components/posts', postList: list %}

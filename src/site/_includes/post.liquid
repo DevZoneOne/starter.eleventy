@@ -8,13 +8,13 @@ layout: base
         <li>
             <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
         </li>
-        {%- for tag in tags | filterTagList %}
-            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        {%- assign taglist = tags | filterTagList %}
+        {%- for tag in taglist %}
             <li>
-                <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+                <a href="/tags/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
                 {%- if not loop.last %}, {% endif %}
             </li>
         {%- endfor %}
     </ul>
-    {{ content | safe }}
+    {{ content }}
 </article>

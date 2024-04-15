@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: page
 title: Contact
 tags: main
 eleventyNavigation:

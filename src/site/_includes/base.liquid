@@ -5,15 +5,15 @@ metadata:
 
 <!DOCTYPE html>
 <html lang="{{ manifest.language }}">
-    {% include 'components/head.njk' %}
+    {% include 'components/head' %}
     <body>
-        {% include 'components/header.njk' %}
+        {% include 'components/header' %}
         <main>
             {%- if draft %}
                 <div class="draft">DRAFT</div>
             {%- endif %}
-            {{ content | safe }}
+            {{ content }}
         </main>
-        {% include 'components/footer.njk' %}
+        {% include 'components/footer' %}
     </body>
 </html>

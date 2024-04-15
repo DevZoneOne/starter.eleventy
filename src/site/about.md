@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: page
 title: About this starter template
 tags: main
 eleventyNavigation:
