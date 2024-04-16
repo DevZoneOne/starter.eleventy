@@ -39,5 +39,8 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^3.0.0",
     "sass": "^1.62.0"
+  },
+  "overrides": {
+    "nunjucks": ">=3.2.4"
   }
 }
