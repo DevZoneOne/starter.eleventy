@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
     {%- for page in collections.all %}
         {%- if page.data.permalink != false %}
             <url>
-                <loc>{{ page.url | htmlBaseUrl: metadata.url }}</loc>
+                <loc>{{ page.url | htmlBaseUrl: manifest.url }}</loc>
                 <lastmod>{{ page.date | htmlDateString }}</lastmod>
             </url>
         {%- endif %}
