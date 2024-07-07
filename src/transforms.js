@@ -1,10 +1,10 @@
-const htmlmin = require("html-minifier");
+const minifier = require("html-minifier-terser");
 const prettier = require("prettier");
 const path = require("path");
 
 const minify = (content, outputPath) => {
   if (outputPath && outputPath.endsWith(".html")) {
-    let minified = htmlmin.minify(content, {
+    let minified = minifier.minify(content, {
       useShortDoctype: true,
       removeComments: true,
       collapseWhitespace: true,
