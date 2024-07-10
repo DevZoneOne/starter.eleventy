@@ -34,6 +34,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("min", filters.min);
   eleventyConfig.addFilter("md", filters.md);
   eleventyConfig.addFilter("filterTagList", filters.filterTagList);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", eleventyRssPlugin.dateToRfc3339);
+  eleventyConfig.addLiquidFilter("getNewestCollectionItemDate", eleventyRssPlugin.getNewestCollectionItemDate);
   // global data
   eleventyConfig.addGlobalData("eleventyComputed.permalink", function () {
     return (data) => helpers.draftPermaLink(data, prodMode);
@@ -51,7 +53,6 @@ module.exports = function (eleventyConfig) {
   );
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(eleventyRssPlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   // static

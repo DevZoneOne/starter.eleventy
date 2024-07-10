@@ -6,20 +6,20 @@ permalink: /feeds/feed.json
 	"title": "{{ manifest.title }}",
 	"language": "{{ manifest.language }}",
 	"home_page_url": "{{ manifest.url | addPathPrefixToFullUrl }}",
-	"feed_url": "{{ permalink | htmlBaseUrl(manifest.url) }}",
-	"description": "{{ manifest.description }}",
+	"feed_url": "{{ permalink | htmlBaseUrl: manifest.url }}",
+	"description": "{{ manifest.meta.description }}",
 	"items": [
-		{%- for post in collections.posts | reverse %}
-	{%- set absolutePostUrl = post.url | htmlBaseUrl(manifest.url) %}
+		{%- for post in collections['posts'] | reverse %}
+		{%- assign absolutePostUrl = post.url | htmlBaseUrl: manifest.url %}
 		{
 			"id": "{{ absolutePostUrl }}",
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
-			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}
+			"content_html": {% if post.page.excerpt %}"{{ post.page.excerpt | strip | strip_newlines | transformWithHtmlBase: absolutePostUrl, post.url }}"
 	{% else %}""{% endif %},
 			"date_published": "{{ post.date | dateToRfc3339 }}"
 		}
-		{% if not loop.last %},{% endif %}
+		{% if not forloop.last %},{% endif %}
 {%- endfor %}
 ]
 }

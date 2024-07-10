@@ -4,19 +4,19 @@ permalink: /feeds/feed.xml
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ manifest.language }}">
     <title>{{ manifest.title }}</title>
-    <subtitle>{{ manifest.description }}</subtitle>
-    <link href="{{ permalink | htmlBaseUrl(manifest.url) }}" rel="self"/>
+    <subtitle>{{ manifest.meta.description }}</subtitle>
+    <link href="{{ permalink | htmlBaseUrl: manifest.url }}" rel="self"/>
     <link href="{{ manifest.url | addPathPrefixToFullUrl }}"/>
-    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <updated>{{ collections['posts'] | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ manifest.url }}</id>
-    {%- for post in collections.posts | reverse %}
-        {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(manifest.url) }}{%- endset %}
+    {%- for post in collections['posts'] | reverse %}
+		{%- assign absolutePostUrl = post.url | htmlBaseUrl: manifest.url %}
         <entry>
             <title>{{ post.data.title }}</title>
             <link href="{{ absolutePostUrl }}"/>
             <updated>{{ post.date | dateToRfc3339 }}</updated>
             <id>{{ absolutePostUrl }}</id>
-            <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
+            <content type="html">{{ post.page.excerpt | strip | strip_newlines | transformWithHtmlBase: absolutePostUrl, post.url }}</content>
         </entry>
     {%- endfor %}
 </feed>
