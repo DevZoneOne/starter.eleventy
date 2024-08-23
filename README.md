@@ -1,6 +1,6 @@
 # Starter template for Eleventy
 
-This is a example markdown / liquid starter template for new Eleventy (11ty) projects.
+This is an example markdown / liquid starter template for new Eleventy (11ty) projects.
 It has preconfigured:
 
 - Eleventy
@@ -9,7 +9,7 @@ It has preconfigured:
   - Render plugin
   - HTML Base plugin
   - Markdown configured with footnotes
-- Liquid based scripts[^feeds] (instead of nunjucks)
+- Liquid-based scripts (instead of nunjucks)
 - SASS[^styling]
 - PostCSS
   - PostCSS hash
@@ -22,7 +22,6 @@ It has preconfigured:
   - Filters (htmlDate, readableDate, head, min, md)
 
 [^styling]: Styling kept minimal on purpose.
-[^feeds]: RSS feeds still need to be rewritten.
 
 ## Detailed description
 
@@ -38,11 +37,11 @@ _(**Please note:** The template and therefore the demo only contains a minimum o
 
 ## How to use the template
 
-Don't fork this repository, that would give you all the branches and
-commit history, not what you want.
+Don't fork this repository. That would give you all the branches and
+commit history that is different from what you want.
 
 - **GitHub** If you're going to put your repo on Github, use the green
-  `Use this template` button and either directly create a new repo, or
+  `Use this template` button to create a new repo or
   open a codespace (online IDE). This will copy over all the files but without any git-related history.
 
 ## Start developing
@@ -56,7 +55,7 @@ commit history, not what you want.
 
 ## Inspiration & Credits
 
-This template starter is partly based on:
+This template starter is partly based on the following:
 
 - https://github.com/11ty/eleventy-base-blog
 - https://github.com/kevin-powell/new-website
