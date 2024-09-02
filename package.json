@@ -2,6 +2,10 @@
   "name": "starter.eleventy",
   "version": "1.0.0",
   "description": "Starter for eleventy",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
@@ -22,25 +26,23 @@
   },
   "homepage": "https://starter-eleventy.devzoneone.app/",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-beta.1",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.5",
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
     "markdown-it-footnote": "^4.0.0",
+    "minify-xml": "^4.5.2",
     "npm-run-all2": "^6.2.2",
     "path": "^0.12.7",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.44",
     "postcss-cli": "^11.0.0",
     "postcss-hash": "^3.0.0",
     "postcss-load-config": "^6.0.1",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.3",
     "sass": "^1.77.8"
-  },
-  "overrides": {
-    "nunjucks": ">=3.2.4"
   }
 }

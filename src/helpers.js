@@ -16,7 +16,7 @@ const draftExcludeFromCollections = (data, prodmode) => {
   return data.eleventyExcludeFromCollections;
 };
 
-module.exports = {
+export default {
   draftExcludeFromCollections,
   draftPermaLink,
 };

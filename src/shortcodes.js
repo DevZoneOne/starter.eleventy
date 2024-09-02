@@ -1,5 +1,5 @@
 const year = () => `${new Date().getFullYear()}`;
 
-module.exports = {
+export default {
   year,
 };

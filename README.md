@@ -3,7 +3,7 @@
 This is an example markdown / liquid starter template for new Eleventy (11ty) projects.
 It has preconfigured:
 
-- Eleventy
+- Eleventy **3 BETA**
   - Navigation plugin
   - RSS plugin
   - Render plugin
@@ -16,7 +16,7 @@ It has preconfigured:
   - AutoPrefixer
   - CSS Nano
 - Prettier (on local builds)
-- HTML Minifier (on production builds)
+- HTML / XML Minifier (on production builds)
 - Example code
   - Shortcode (year)
   - Filters (htmlDate, readableDate, head, min, md)
