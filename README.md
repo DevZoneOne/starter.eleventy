@@ -3,7 +3,7 @@
 This is an example markdown / liquid starter template for new Eleventy (11ty) projects.
 It has preconfigured:
 
-- Eleventy **3 BETA**
+- Eleventy **3**
   - Navigation plugin
   - RSS plugin
   - Render plugin
