@@ -11,14 +11,11 @@ eleventyNavigation:
 
 This is an example markdown / liquid starter template for _[Eleventy](https://11ty.dev)_ as explained in this **[DevZone.one - Get started with Eleventy](https://devzone.one/posts/get-started-with-eleventy)**.
 
-> ***This starter is updated to Eleventy 3 Beta. Although this is not a final release yet, we use it already for a while
-> in our production websites without issues.***
-
 The template can be found on GitHub: <https://github.com/DevZoneOne/starter.eleventy>.
 
 Included in this starter template:
 
-- Eleventy **3 BETA**
+- Eleventy **3**
   - Navigation plugin
   - RSS plugin
   - Render plugin
