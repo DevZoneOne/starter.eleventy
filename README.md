@@ -1,3 +1,11 @@
+>
+> ## Eleventy -> BuildAwesome
+>
+> With the rebranding of Eleventy, now part of the same commercial company as Font Awesome, we no longer like to promote Eleventy as a static
+> CMS. We switched our sites (back) to Hugo and recommend that instead.
+>
+> This repo/template is now archived and will no longer be maintained.
+
 # Starter template for Eleventy
 
 This is an example markdown / liquid starter template for new Eleventy (11ty) projects.
